@@ -50,7 +50,9 @@ function clicked() {
       alert("You must enter a number between 8 and 128.");
     } else {
       setPassword(passLength);
-      alert("Your password is: " + userPassword);
+      document.getElementById("password").innerHTML = userPassword;
+
+      // alert("Your password is: " + userPassword);
     }
   }
 
