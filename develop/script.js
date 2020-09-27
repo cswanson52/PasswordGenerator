@@ -12,24 +12,32 @@ var userPassword = "";
 
 function clicked() {
 
-  alert("Passwords must contain at least lowercase, uppercase, special characters, and/or numbers.");
 
-  var isLower = confirm("Do you want to use lower case letters?");
-  var isUpper = confirm("Do you want to use upper case letters?");
-  var isCharacter = confirm("Do you want to use special characters?");
-  var isNumber = confirm("Do you want to use numbers?");
+  // Setting value for second button click without reloading website
+  passwordPool = "";
+  userPassword = "";
 
-  if (isLower) {
-    passwordPool += lowerCase;
-  }
-  if (isUpper) {
-    passwordPool += upperCase;
-  }
-  if (isCharacter) {
-    passwordPool += specialCharacter;
-  }
-  if (isNumber) {
-    passwordPool += numbers;
+  while (!passwordPool) {
+
+    alert("Passwords must contain at least lowercase, uppercase, special characters, and/or numbers.");
+
+    var isLower = confirm("Do you want to use lower case letters?");
+    var isUpper = confirm("Do you want to use upper case letters?");
+    var isCharacter = confirm("Do you want to use special characters?");
+    var isNumber = confirm("Do you want to use numbers?");
+
+    if (isLower) {
+      passwordPool += lowerCase;
+    }
+    if (isUpper) {
+      passwordPool += upperCase;
+    }
+    if (isCharacter) {
+      passwordPool += specialCharacter;
+    }
+    if (isNumber) {
+      passwordPool += numbers;
+    }
   }
 
   // Loop to make sure password is between 8-128 characters and a valid number
